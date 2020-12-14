@@ -308,7 +308,10 @@
                 }
             }
 
-            lastRange = range;
+            lastRange = {
+                exported: this.base.exportSelection(),
+                range: range
+            };
 
             var pasteBinElm = this.document.createElement('div');
             pasteBinElm.id = this.pasteBinId = 'medium-editor-pastebin-' + (+Date.now());
@@ -336,7 +339,8 @@
 
         removePasteBin: function () {
             if (null !== lastRange) {
-                MediumEditor.selection.selectRange(this.document, lastRange);
+                MediumEditor.selection.selectRange(this.document, lastRange.range);
+                this.base.importSelection(lastRange.exported);
                 lastRange = null;
             }
 
