@@ -235,7 +235,7 @@ module.exports = function (grunt) {
     }
 
     grunt.registerTask('test', ['jshint', 'jscs', 'concat', 'csslint', 'karma:dev']);
-    grunt.registerTask('js', ['jshint', 'jscs', 'concat', 'karma:dev', 'uglify']);
+    grunt.registerTask('js', ['jshint', 'jscs', 'concat', /* 'karma:dev' ,*/ 'uglify']);
     grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin', 'csslint']);
     grunt.registerTask('default', ['js', 'css']);
 
