@@ -475,8 +475,8 @@
         this.subscribe('editableKeydownTab', handleTabKeydown.bind(this));
 
         // Bind keys which can create or destroy a block element: backspace, delete, return
-        this.subscribe('editableKeydownDelete', handleBlockDeleteKeydowns.bind(this));
-        this.subscribe('editableKeydownEnter', handleBlockDeleteKeydowns.bind(this));
+        // this.subscribe('editableKeydownDelete', handleBlockDeleteKeydowns.bind(this));
+        // this.subscribe('editableKeydownEnter', handleBlockDeleteKeydowns.bind(this));
 
         // Bind double space event
         if (this.options.disableExtraSpaces) {
